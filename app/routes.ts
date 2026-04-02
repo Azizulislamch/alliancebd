@@ -16,7 +16,8 @@ export default [
     index("routes/home.tsx"),
     // route("login", "./auth/login.tsx"),
     route("about", "routes/about.tsx"),
-    route("buying-house", "routes/buying-house.tsx")
+    route("buying-house", "routes/buying-house.tsx"),
+    route("factory", "routes/factory.tsx")
     
   ]),
 ] satisfies RouteConfig;

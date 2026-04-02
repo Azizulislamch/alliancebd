@@ -1,7 +1,9 @@
-export default function BuyingHouse () {
+import Buying from "~/components/Buying/BuyingHouse";
+
+export default function BuyingHousePage () {
     return (
         <div>
-            Buying House
+            <Buying/>
         </div>
     )
 }

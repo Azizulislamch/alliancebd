@@ -1,7 +1,9 @@
-export default function About (){
+import About from "~/components/About/About";
+
+export default function AboutPage (){
     return (
         <div>
-            About Us
+            <About/>
         </div>
     )
 }
