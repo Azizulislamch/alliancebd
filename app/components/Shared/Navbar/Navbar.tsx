@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 import logo from "../../../assets/images/logo.png"
 
@@ -9,45 +9,55 @@ export default function Navbar() {
 
                 {/* LEFT: LOGO */}
                 <div className="flex items-center gap-4">
-                    <img
-                        src={logo}
-                        alt="logo"
-                        className="h-9 object-contain hover:cursor-pointer"
-                    />
-                    
+                    <NavLink to="/">
+                        <img
+                            src={logo}
+                            alt="logo"
+                            className="h-9 object-contain cursor-pointer"
+                        />
+                    </NavLink>
+
                 </div>
 
                 {/* CENTER: MENU */}
                 <ul className="hidden md:flex items-center gap-8 text-gray-700">
                     <li>
-                        <Link to="/" className="hover:text-blue-500">
+                        <NavLink to="/" className={({ isActive }) =>
+                            isActive ? "text-blue-500 font-bold" : "hover:text-blue-500 text-gray-700"
+                        }>
                             Home
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/about" className="hover:text-blue-500">
+                        <NavLink to="/about" className={({ isActive }) =>
+                            isActive ? "text-blue-500 font-bold" : "hover:text-blue-500 text-gray-700"
+                        }>
                             About Us
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/buying-house" className="hover:text-blue-500">
+                        <NavLink to="/buying-house" className={({ isActive }) =>
+                            isActive ? "text-blue-500 font-bold" : "hover:text-blue-500 text-gray-700"
+                        }>
                             Buying House
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/factory" className="hover:text-blue-500">
+                        <NavLink to="/factory" className={({ isActive }) =>
+                            isActive ? "text-blue-500 font-bold" : "hover:text-blue-500 text-gray-700"
+                        }>
                             Factory & Machinery
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
 
                 {/* RIGHT: BUTTON */}
                 <div>
-                    <Link to="/contact">
+                    <NavLink to="/contact">
                         <button className="bg-blue-500 text-white px-5 py-2 rounded-md hover:bg-blue-600 cursor-pointer transition">
                             Contact US
                         </button>
-                    </Link>
+                    </NavLink>
                 </div>
             </div>
         </div>
