@@ -54,7 +54,7 @@ export default function Navbar() {
                 {/* RIGHT: BUTTON */}
                 <div>
                     <NavLink to="/contact">
-                        <button className="bg-blue-500 text-white px-5 py-2 rounded-md hover:bg-blue-600 cursor-pointer transition">
+                        <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-md cursor-pointer transition">
                             Contact US
                         </button>
                     </NavLink>

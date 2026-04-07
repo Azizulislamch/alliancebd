@@ -12,15 +12,18 @@ export default function Hero() {
             />
 
             <div className="relative z-20 text-center max-w-3xl px-4">
-                <h1 className="text-5xl font-bold mb-6 leading-tight">
+                <h1 className="text-6xl font-bold mb-6 leading-tight">
                     Your trusted partner in apparel sourcing
                 </h1>
+                <p className="text-lg mb-5">
+                    We connect international buyers with reliable manufacturers across Bangladesh. From product development to final shipment, we handle every detail with precision and care.
+                </p>
                 <div className="flex justify-center gap-4">
-                    <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-sm uppercase text-sm font-bold transition">
-                        Learn More
+                    <button className="bg-cyan-500 hover:bg-cyan-600 cursor-pointer text-white px-8 py-3 rounded-sm uppercase text-sm font-bold transition">
+                        Contact Us
                     </button>
-                    <button className="bg-white hover:bg-gray-100 text-black px-8 py-3 rounded-sm uppercase text-sm font-bold transition">
-                        Our Services
+                    <button className="bg-white hover:bg-cyan-100 cursor-pointer text-sky-500 px-8 py-3 rounded-sm uppercase text-sm font-bold transition">
+                        Learn More
                     </button>
                 </div>
             </div>
