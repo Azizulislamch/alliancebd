@@ -23,28 +23,28 @@ export default function Navbar() {
                 <ul className="hidden md:flex items-center gap-8 text-gray-700">
                     <li>
                         <NavLink to="/" className={({ isActive }) =>
-                            isActive ? "text-blue-500 font-bold" : "hover:text-blue-500 text-gray-700"
+                            isActive ? "text-cyan-500 font-bold" : "hover:text-cyan-500 text-gray-700"
                         }>
                             Home
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/about" className={({ isActive }) =>
-                            isActive ? "text-blue-500 font-bold" : "hover:text-blue-500 text-gray-700"
+                            isActive ? "text-cyan-500 font-bold" : "hover:text-cyan-500 text-gray-700"
                         }>
                             About Us
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/buying-house" className={({ isActive }) =>
-                            isActive ? "text-blue-500 font-bold" : "hover:text-blue-500 text-gray-700"
+                            isActive ? "text-cyan-500 font-bold" : "hover:text-cyan-500 text-gray-700"
                         }>
                             Buying House
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/factory" className={({ isActive }) =>
-                            isActive ? "text-blue-500 font-bold" : "hover:text-blue-500 text-gray-700"
+                            isActive ? "text-cyan-500 font-bold" : "hover:text-cyan-500 text-gray-700"
                         }>
                             Factory & Machinery
                         </NavLink>
