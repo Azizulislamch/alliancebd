@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { NotebookPen, Handshake, ShoppingCart, Award } from "lucide-react";
 
 const steps = [
@@ -24,37 +25,82 @@ const steps = [
 ];
 
 export default function WorkProcess() {
+    
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    // For every step
+    const itemVariants = {
+        hidden: { opacity: 0, x: 30 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    };
+
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="flex justify-between flex-col lg:flex-row">
+                <div className="flex justify-between flex-col lg:flex-row gap-12 lg:gap-0">
 
                     {/* Left Side: Title & Button */}
-                    <div className="lg:w-1/2">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.6 }}
+                        className="lg:w-1/2"
+                    >
                         <span className="text-sm font-semibold text-gray-900 mb-4 block">Process</span>
                         <h2 className="text-5xl font-bold text-gray-900 mb-8 leading-tight">
                             How we work
                         </h2>
-                        <button className="px-8 py-3 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-100 transition shadow-sm">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-8 py-3 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-100 transition shadow-sm"
+                        >
                             Discuss
-                        </button>
-                    </div>
+                        </motion.button>
+                    </motion.div>
 
                     {/* Right Side: Steps with Vertical Line */}
-                    <div className="lg:w-1/2 relative">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.2 }}
+                        className="lg:w-1/2 relative"
+                    >
                         <div className="space-y-12">
                             {steps.map((step, index) => (
-                                <div key={index} className="relative flex items-start gap-8 group">
-
+                                <motion.div
+                                    key={index}
+                                    variants={itemVariants}
+                                    className="relative flex items-start gap-8 group"
+                                >
                                     {/* Vertical Line Logic */}
                                     {index !== steps.length - 1 && (
-                                        <div className="absolute left-5.75 top-12 w-px h-[calc(100%+12px)] bg-gray-200"></div>
+                                        <motion.div
+                                            initial={{ height: 0 }}
+                                            whileInView={{ height: "100%" }}
+                                            transition={{ duration: 0.8, delay: index * 0.2 }}
+                                            className="absolute left-5.75 top-12 w-px bg-gray-200 origin-top"
+                                        ></motion.div>
                                     )}
 
                                     {/* Icon Circle */}
-                                    <div className="relative z-10 shrink-0 w-12 h-12 flex items-center justify-center bg-white border border-gray-100 rounded-md">
+                                    <motion.div
+                                        whileInView={{ scale: [0, 1.2, 1] }}
+                                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                                        className="relative z-10 shrink-0 w-12 h-12 flex items-center justify-center bg-white border border-gray-100 rounded-md shadow-sm"
+                                    >
                                         {step.icon}
-                                    </div>
+                                    </motion.div>
 
                                     {/* Content */}
                                     <div className="pt-2">
@@ -65,10 +111,10 @@ export default function WorkProcess() {
                                             {step.description}
                                         </p>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>
