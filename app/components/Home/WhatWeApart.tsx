@@ -1,30 +1,30 @@
-// app/components/home/Features.tsx
+// app/components/home/WhatWeApart.tsx
 import { ShieldCheck, Leaf, Clock, Globe } from "lucide-react";
 
-const features = [
+const card = [
     {
         title: "Quality assurance",
         description: "Strict quality control procedures at every stage of production.",
-        icon: <ShieldCheck className="w-10 h-10 text-gray-400" />,
+        icon: <ShieldCheck className="w-10 h-10 text-orange-400" />,
     },
     {
         title: "Ethical sourcing",
         description: "We adhere to fair labor practices and environmental standards.",
-        icon: <Leaf className="w-10 h-10 text-gray-400" />,
+        icon: <Leaf className="w-10 h-10 text-green-400" />,
     },
     {
         title: "On-time delivery",
         description: "Efficient logistics management ensuring your orders arrive on schedule.",
-        icon: <Clock className="w-10 h-10 text-gray-400" />,
+        icon: <Clock className="w-10 h-10 text-purple-400" />,
     },
     {
         title: "Global network",
         description: "Access to a wide range of manufacturers across various regions.",
-        icon: <Globe className="w-10 h-10 text-gray-400" />,
+        icon: <Globe className="w-10 h-10 text-blue-400" />,
     },
 ];
 
-export default function Features() {
+export default function WhatApart() {
     return (
         <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4">
@@ -40,7 +40,7 @@ export default function Features() {
 
                 {/* Features Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {features.map((item, index) => (
+                    {card.map((item, index) => (
                         <div
                             key={index}
                             className="p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow hover:bg-gray-100 flex flex-col items-start"
