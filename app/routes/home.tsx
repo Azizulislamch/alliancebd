@@ -4,6 +4,7 @@ import Hero from "../components/Home/Hero";
 import WhatWeApart from "../components/Home/WhatWeApart";
 import WorkProcess from "../components/Home/WorkProcess";
 import ServiceBrief from "../components/Home/ServiceBrief";
+import BuyingServiceGrid from "../components/Shared/Common/BuyingServiceGrid";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -20,6 +21,7 @@ export default function Home() {
       <WhatWeApart />
       <WorkProcess />
       <ServiceBrief />
+      <BuyingServiceGrid />
     </main>
   );
 }
