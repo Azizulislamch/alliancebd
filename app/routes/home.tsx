@@ -1,13 +1,20 @@
+// app/routes/home.tsx
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Hero from "../components/Home/Hero";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Alliance Sourcing BD | Home" },
+    { name: "description", content: "Your trusted partner in apparel sourcing" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main>
+      {/* Call all components of Home Page */}
+      <Hero />
+      
+    </main>
+  );
 }
