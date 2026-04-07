@@ -3,6 +3,7 @@ import type { Route } from "./+types/home";
 import Hero from "../components/Home/Hero";
 import WhatWeApart from "../components/Home/WhatWeApart";
 import WorkProcess from "../components/Home/WorkProcess";
+import ServiceBrief from "../components/Home/ServiceBrief";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <WhatWeApart />
       <WorkProcess />
+      <ServiceBrief />
     </main>
   );
 }

@@ -35,7 +35,7 @@ export default function WorkProcess() {
                         <h2 className="text-5xl font-bold text-gray-900 mb-8 leading-tight">
                             How we work
                         </h2>
-                        <button className="px-8 py-3 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition shadow-sm">
+                        <button className="px-8 py-3 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-100 transition shadow-sm">
                             Discuss
                         </button>
                     </div>
