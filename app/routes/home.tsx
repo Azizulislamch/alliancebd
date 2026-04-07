@@ -2,8 +2,9 @@
 import type { Route } from "./+types/home";
 import Hero from "../components/Home/Hero";
 import WhatWeApart from "../components/Home/WhatWeApart";
+import WorkProcess from "../components/Home/WorkProcess";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Alliance Sourcing BD | Home" },
     { name: "description", content: "Your trusted partner in apparel sourcing" },
@@ -15,7 +16,8 @@ export default function Home() {
     <main>
       {/* Call all components of Home Page */}
       <Hero />
-      <WhatWeApart/>
+      <WhatWeApart />
+      <WorkProcess />
     </main>
   );
 }
