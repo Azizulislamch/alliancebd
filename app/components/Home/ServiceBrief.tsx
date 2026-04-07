@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCheck, faObjectGroup, faFileInvoiceDollar } from "@fortawesome/free-solid-svg-icons";
 import serviceImg from "../../assets/images/Banner.png";
@@ -19,11 +20,18 @@ export default function ServiceBrief() {
     ];
 
     return (
-        <section className="py-20 bg-[#f8eadf]">
+        <section className="py-20 bg-[#f8eadf] overflow-hidden">
             <div className="container mx-auto px-8 max-w-7xl">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+               
+                <motion.div 
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.2 }} 
+                    transition={{ duration: 0.6 }}
+                    className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
+                >
 
-                    {/* Left Side: Rounded Image */}
+                    {/* Left Side: Image */}
                     <div className="w-full lg:w-1/2">
                         <img
                             src={serviceImg}
@@ -63,7 +71,7 @@ export default function ServiceBrief() {
                         </button>
                     </div>
 
-                </div>
+                </motion.div>
             </div>
         </section>
     );
