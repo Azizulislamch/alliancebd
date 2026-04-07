@@ -62,7 +62,7 @@ export default function WorkProcess() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-100 transition shadow-sm"
+                            className="px-8 py-3 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-100 transition shadow-sm cursor-pointer"
                         >
                             Discuss
                         </motion.button>

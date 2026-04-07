@@ -66,7 +66,7 @@ export default function ServiceBrief() {
                             ))}
                         </div>
 
-                        <button className="bg-white border border-gray-200 px-10 py-3 rounded-lg font-semibold text-gray-900 hover:bg-gray-100 transition shadow-sm">
+                        <button className="bg-white border border-gray-200 px-10 py-3 rounded-lg font-semibold text-gray-900 hover:bg-gray-100 transition shadow-sm cursor-pointer">
                             Explore
                         </button>
                     </div>

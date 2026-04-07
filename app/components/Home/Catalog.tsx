@@ -86,11 +86,9 @@ export default function Catalog() {
                         </div>
 
                         <motion.button
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: false }}
-                            transition={{ delay: 0.5 }}
-                            className="mt-12 px-10 py-3 border border-gray-200 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition shadow-sm"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="mt-12 px-10 py-3 border border-gray-200 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition shadow-sm cursor-pointer"
                         >
                             Browse
                         </motion.button>
