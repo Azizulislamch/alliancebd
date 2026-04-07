@@ -1,7 +1,7 @@
 // app/routes/home.tsx
 import type { Route } from "./+types/home";
 import Hero from "../components/Home/Hero";
-import FeatureStats from "../components/Home/FeatureStats";
+import WhatWeApart from "../components/Home/WhatWeApart";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       {/* Call all components of Home Page */}
       <Hero />
-      <FeatureStats/>
+      <WhatWeApart/>
     </main>
   );
 }
