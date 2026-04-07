@@ -7,6 +7,7 @@ import ServiceBrief from "../components/Home/ServiceBrief";
 import BuyingServiceGrid from "../components/Shared/Common/BuyingServiceGrid";
 import Catalog from "../components/Home/Catalog";
 import ProfService from "../components/Home/ProfService";
+import ContactCTA from "../components/Home/ContactCTA";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -26,6 +27,7 @@ export default function Home() {
       <BuyingServiceGrid />
       <Catalog />
       <ProfService />
+      <ContactCTA />
     </main>
   );
 }
