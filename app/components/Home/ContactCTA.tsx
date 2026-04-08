@@ -7,7 +7,7 @@ export default function ContactCTA() {
                 <div
                     className="relative w-full overflow-hidden min-h-112.5 flex items-center justify-center text-center"
                     style={{
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${ctaBg})`,
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(${ctaBg})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
